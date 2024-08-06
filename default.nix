@@ -20,6 +20,8 @@ buildNpmPackage rec {
 
   dontNpmBuild = true;
 
+  patches = [./fix-file-lookup.patch];
+
   meta = with lib; {
     description = "Check for outdated, incorrect, and unused dependencies";
     mainProgram = "npm-check";

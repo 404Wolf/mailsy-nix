@@ -1,0 +1,12 @@
+--- $src/utils/index.js	2024-08-06 18:46:43.995618931 -0400
++++ $src/utils/index.js	2024-08-06 18:47:15.571325021 -0400
+@@ -10,7 +10,7 @@
+ 
+ const dirname = path.dirname(fileURLToPath(import.meta.url));
+ 
+-const adapter = new JSONFile(path.join(dirname, "../data/account.json"));
++const adapter = new JSONFile(path.join(process.cwd(), "account.json"));
+ 
+ const db = new Low(adapter);
+ 
+
