@@ -1,5 +1,5 @@
---- $src/utils/index.js	2024-08-06 18:46:43.995618931 -0400
-+++ $src/utils/index.js	2024-08-06 18:47:15.571325021 -0400
+--- $src/utils/index.js	2024-08-06 19:13:25.329421171 -0400
++++ $src/utils/index.js	2024-08-06 19:14:10.896022059 -0400
 @@ -10,7 +10,7 @@
  
  const dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -9,4 +9,13 @@
  
  const db = new Low(adapter);
  
+@@ -142,7 +142,7 @@
+     });
+ 
+     // delete the account.json file
+-    await fs.unlink(path.join(dirname, "../data/account.json"));
++    await fs.unlink(path.join(process.cwd(), "account.json"));
+ 
+     // stop the spinner
+     spinner.stop();
 
