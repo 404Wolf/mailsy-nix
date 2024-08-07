@@ -23,11 +23,10 @@ buildNpmPackage rec {
   patches = [./fix-file-lookup.patch];
 
   meta = with lib; {
-    description = "Check for outdated, incorrect, and unused dependencies";
-    mainProgram = "npm-check";
-    homepage = "https://github.com/dylang/npm-check";
-    changelog = "https://github.com/dylang/npm-check/releases/tag/v${version}";
+    description = "⚡️ Quickly generate a disposable email straight from terminal.";
+    mainProgram = "mailsy";
+    homepage = "https://fig.io/manual/mailsy";
     license = licenses.mit;
-    maintainers = [maintainers.thomasjm];
+    maintainers = [maintainers."404wolf"];
   };
 }
